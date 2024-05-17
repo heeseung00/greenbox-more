@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:5500/grid.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <!-- 적게 사용하는 이유: 최근에 만들어져서 호환이 잘 안된다. -->
+    <style>
+      /* #wrapper {
+        display: grid;
+        grid-template-columns: 100px 200px 300px;
+        grid-template-rows: 100px 80px;
+      }
+
+      .items {
+        background-color: bisque;
+      }
+
+      .items:nth-child(odd) {
+        background-color: aquamarine;
+      } */
+
+      /* #wrapper1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      #wrapper2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      } */
+
+      /* odd 짝수? 홀수? */
+      /* .items:nth-child(odd) {
+        background-color: aquamarine;
+      } */
+
+      #wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+      }
+
+      .box {
+        padding: 15px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .box1 {
+        background-color: rgb(128, 179, 162);
+        grid-column: 1/4;
+        grid-column-start: 1;
+      }
+      .box2 {
+        background-color: rgb(128, 156, 179);
+        /* grid-column: 1/2; */
+        grid-row: 2/4;
+      }
+      .box3 {
+        background-color: rgb(167, 128, 179);
+        grid-column: 2/4;
+      }
+      .box4 {
+        background-color: rgb(168, 179, 128);
+        grid-column: 2/3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>auto-fit일 때</h1>
+    <div id="wrapper1">
+      <div class="items">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+        nesciunt magni voluptatem.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nulla
+        corrupti porro!
+      </div>
+      <div class="items">Lorem ipsum dolor sit.</div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+        quos!
+      </div>
+      <div class="items">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro odit
+        quam sit.
+      </div>
+    </div>
+
+    <h1>auto-fill일 때</h1>
+    <div id="wrapper2">
+      <div class="items">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+        nesciunt magni voluptatem.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nulla
+        corrupti porro!
+      </div>
+      <div class="items">Lorem ipsum dolor sit.</div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+        quos!
+      </div>
+      <div class="items">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro odit
+        quam sit.
+      </div>
+    </div> -->
+    <!-- <div id="wrapper">
+      <div class="items">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+        nesciunt magni voluptatem.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nulla
+        corrupti porro!
+      </div>
+      <div class="items">Lorem ipsum dolor sit.</div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+        quos!
+      </div>
+
+      <div class="items">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro odit
+        quam sit.
+      </div>
+    </div> -->
+    <div id="wrapper">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

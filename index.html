@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="신선하고 건강한 샐러드를 언제 어디서나 간편하게 즐기는 그린박스" />
+        <meta
+            name="keywords"
+            content="샐러드, 닭가슴살, 샐러드배달, 샐러드도시락, 다이어트도시락, 포켓닭, 탄단지, 다이어트, 다이어트식단, 식단관리, 샐러드배송, 샐러드정기배송, 샐러드주문" />
+
+        <!-- favicon 적용 -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-2/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-2/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-2/favicon-32x32.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- css 초기화 -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <!-- 폰트어썸 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <!-- 자바스크립트 -->
+        <script src="js/html5shiv.js"></script>
+        <!-- <script src="js/prefixfree.min.js"></script> -->
+        <script src="js/respond.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <title>미니 프로젝트-그린박스</title>
+    </head>
+    <body>
+        <!-- 모달창 -->
+        <div class="modal-wrap" id="modalWrap">
+            <div class="modal-main">
+                <a href="index.html" class="modal-img">
+                    <img src="images/modal-new-coupon.png" alt="" id="modalImg" />
+                </a>
+                <div class="modal-new">
+                    <h2>고객님, 방문해주셔서 감사해요</h2>
+                    <p>첫 구매 한정 혜택 놓치지 마세요😍</p>
+                    <a href="#!"><button class="modal-new-btn">신규회원 혜택 보러가기</button></a>
+                </div>
+
+                <div class="modal-text">
+                    <div class="modal-today" id="modalToday">다시 보지 않기</div>
+                    <div class="modal-close" id="modalClose">닫기</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 고정 아이콘 -->
+        <div class="icon-wrap">
+            <div id="chatBtn">
+                <img src="images/caht-img-q.svg" alt="" class="caht-img-q" />
+                <div class="chat-text-box">
+                    <div class="chat-title">
+                        <div class="chat-logo">
+                            <div class="chat-logo-img"></div>
+                        </div>
+                        <div class="sub-title">Contact 그린박스</div>
+                    </div>
+
+                    <div class="chat-start">
+                        <div class="chat-text">
+                            <p>반갑습니다 고객님!😊</p>
+                            <p><span>건강한 오늘의 하루</span> <br />​ 그린박스입니다.</p>
+                            <p>
+                                문의사항을 남겨주시면 최대한 빠른<br />
+                                확인과 처리 도와드리겠습니다.<br />
+                                부담없이 문의사항을 남겨주세요🛎️
+                            </p>
+                        </div>
+                        <a href=""><button class="start-btn">새로운 상담 시작</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 탑버튼 -->
+            <div id="topBtn">
+                <img src="images/top-arrow.png" alt="탑 아이콘" />
+            </div>
+        </div>
+
+        <!-- 챗 버튼 모바일 -->
+        <div class="chat-text-mobile">
+            <div class="chat-text-close">
+                <a href="#!">
+                    <img src="images/chat-text-close.png" alt="닫기 버튼" />
+                </a>
+            </div>
+            <div class="chat-title">
+                <div class="chat-logo">
+                    <div class="chat-logo-img"></div>
+                </div>
+                <div class="sub-title">Contact 그린박스</div>
+            </div>
+
+            <div class="chat-start">
+                <div class="chat-text">
+                    <p>반갑습니다 고객님!😊</p>
+                    <p><span>건강한 오늘의 하루</span> <br />​ 그린박스입니다.</p>
+                    <p>
+                        문의사항을 남겨주시면 최대한 빠른<br />
+                        확인과 처리 도와드리겠습니다.<br />
+                        부담없이 문의사항을 남겨주세요🛎️
+                    </p>
+                </div>
+                <a href="#!"><button class="start-btn">새로운 상담 시작</button></a>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <!-- 탑배너 -->
+            <section class="top-banner">
+                <a href="#" class="top-banner-text">지금 가입하면 첫 정기배송 30,000원 할인 쿠폰팩</a>
+                <a href="#" class="top-banner-close"><img src="images/btn_close.png" alt="닫기" /></a>
+            </section>
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="ham-menu">
+                    <ul class="ham-gnb">
+                        <button class="ham-close">닫기</button>
+                        <li>
+                            <a href="#" class="depth1">선택식단</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">식단스타터(1주)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6주+식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">간편식</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">너랑나랑</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">정기식단</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">짜여진 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">클린핏 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">단기 집중 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1주 맞춤 식단</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">샐러드</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">데일리 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">테이스티 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">그린 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">맛보기 세트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">드레싱</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">간편식</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">라이스 시즌1&2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">곤약 라이스 시즌3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">미니컵밥</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">베스트</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">첫 구매 추천</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">베스트 식단 4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MD's PICK!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">이벤트</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">식단스타터(1주)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6주+식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="inner">
+                    <ul class="header-top">
+                        <li>
+                            <a href="#">회원가입</a>
+                        </li>
+                        <li>
+                            <a href="#">로그인</a>
+                        </li>
+                        <li class="header-cs">
+                            <a href="#">고객센터</a>
+                            <div class="cs-in">
+                                <ul>
+                                    <li>
+                                        <a href="#">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">자주하는 문의</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1:1 문의</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">공지사항</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="header-mid">
+                        <div class="header-mid-left">
+                            <a href=""><img src="images/미압축/btn_right_menu.png" alt="" /></a>
+                            <!-- <a href=""><i class="fa fa-solid fa-bars"></i></a> -->
+                        </div>
+                        <a href="index.html" class="logo">
+                            <img src="images/미압축/logo-2.png" alt="그린박스 로고" />
+                        </a>
+                        <div class="header-mid-right">
+                            <a href="#">
+                                <button type="button" class="search-icon" id=""></button>
+                            </a>
+                            <a href="#" class="user-icon"><img src="images/user-icon.svg" alt="마이페이지 아이콘" /></a>
+                            <a href="#" class="cart-icon"><img src="images/cart-icon.svg" alt="카드 아이콘" /></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- nav -->
+            <nav class="nav">
+                <div class="inner">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth1">선택식단</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">식단스타터(1주)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6주+식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">간편식</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">너랑나랑</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">정기식단</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">짜여진 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">클린핏 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">단기 집중 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1주 맞춤 식단</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">샐러드</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">데일리 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">테이스티 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">그린 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">맛보기 세트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">드레싱</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">간편식</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">라이스 시즌1&2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">곤약 라이스 시즌3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">미니컵밥</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">베스트</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">첫 구매 추천</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">베스트 식단 4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MD's PICK!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">이벤트</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">식단스타터(1주)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6주+식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form action="" class="search">
+                        <a href="#"> <input type="text" class="search-text" placeholder="검색어를 입력해주세요." /></a>
+                        <a href="#">
+                            <button type="button" class="search-icon" id=""></button>
+                        </a>
+                    </form>
+                </div>
+                <div class="nav-bg"></div>
+            </nav>
+
+            <nav class="nav-m">
+                <div class="inner">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth1">선택식단</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">식단스타터(1주)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6주+식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">간편식</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">너랑나랑</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">정기식단</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">짜여진 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">클린핏 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">단기 집중 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1주 맞춤 식단</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">샐러드</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">데일리 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">테이스티 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">그린 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만 샐러드</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">맛보기 세트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">드레싱</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">간편식</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">라이스 시즌1&2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">곤약 라이스 시즌3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">미니컵밥</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">베스트</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">첫 구매 추천</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">베스트 식단 4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MD's PICK!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">이벤트</a>
+                            <div class="depth2-wrap">
+                                <div class="depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">식단스타터(1주)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4주 식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6주+식단</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채소만</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-bg"></div>
+            </nav>
+            <!-- 비주얼 -->
+            <section class="visual">
+                <!-- swiper 적용-->
+                <div class="visual-slide">
+                    <button class="sw-bt sw-visual-prev"></button>
+                    <button class="sw-bt sw-visual-next"></button>
+                    <!-- 비주얼 swiper -->
+                    <div class="swiper sw-visual">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="visual-box visual-bg-1">
+                                    <div class="inner">
+                                        <h2 class="visual-text-1">
+                                            그린박스는 청정 지역에서<br />
+                                            직접 프리미엄 채소를 재배합니다.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide" id="swiperSlide2">
+                                <div class="visual-box visual-bg-2" id="visualBg2">
+                                    <div class="inner">
+                                        <h2 class="visual-text-2">
+                                            더 새로워진 <br />
+                                            그린박스를 만나보세요
+                                        </h2>
+                                        <div class="button_wrap">
+                                            <div class="visual-btn"><a target="_blank" href="#">더보기</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="visual-box visual-bg-3">
+                                    <div class="inner">
+                                        <h2>
+                                            더 맛있고<br />
+                                            든든해진 한 끼
+                                        </h2>
+                                        <p>
+                                            맛을 더 오래 즐기고 든든함이 유지되도록<br />
+                                            맛있는 재료들로 가득 채웠어요
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="visual-box visual-bg-4">
+                                    <div class="inner">
+                                        <h2>
+                                            더 신선하고<br />
+                                            깨끗해진 한 끼
+                                        </h2>
+                                        <p>
+                                            진공 포장으로 신선함을 오래 유지하고<br />
+                                            스파클링 세척으로 더 깨끗하게 만들어요
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="visual-box visual-bg-5">
+                                    <div class="inner">
+                                        <h2>
+                                            간편식까지<br />
+                                            건강하게 즐겨요
+                                        </h2>
+                                        <p>
+                                            맛을 더 오래 즐기고 든든함이 유지되도록 <br />
+                                            맛있는 재료들로 가득 채웠어요
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 카테고리 -->
+            <section class="category">
+                <div class="inner">
+                    <div class="category-wrap">
+                        <a href="#">
+                            <img src="images/category_img_1.png" alt="신규혜택" />
+                            <p>신규혜택</p>
+                        </a>
+                        <a href="#">
+                            <img src="images/category_img_2.png" alt="샐러드" />
+                            <p>샐러드</p>
+                        </a>
+                        <a href="#">
+                            <img src="images/category_img_3.png" alt="간편식" />
+                            <p>간편식</p>
+                        </a>
+                        <a href="#">
+                            <img src="images/미압축/category-img-4-tra.png" alt="미니컵밥" />
+                            <p>미니컵밥</p>
+                        </a>
+                        <a href="#">
+                            <img src="images/category_img_4.png" alt="오늘의 식단" />
+                            <!-- <p>베스트</p> -->
+                            <!-- <p>오늘의 샐러드</p> -->
+                            <p>오늘의 식단</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 맛보기 -->
+            <section class="test">
+                <div class="inner">
+                    <h1 class="test-title section-title">처음이라면, 맛보기 어때요?</h1>
+                    <i class="more-arrow"><a href="#">더보기</a></i>
+                    <!-- swiper 적용-->
+                    <div class="test-slide">
+                        <button class="sw-bt sw-test-prev"></button>
+                        <button class="sw-bt sw-test-next"></button>
+                        <!-- test swiper -->
+                        <div class="swiper sw-test">
+                            <div class="swiper-wrapper">
+                                <!-- 첫 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <!-- 각 아이템 리스트 -->
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#" class="item-img">
+                                                    <img src="images/1.jpg" alt="일주일 식단" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-title">
+                                                <a href="#">원클릭 일주일 식단</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>21%</span>
+                                                <span>37,700원</span>
+                                                <span>48,000원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>61</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 두 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#" class="item-img">
+                                                    <img src="images/2.jpg" alt="두 끼 밸런스" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-title">
+                                                <a href="#">[두 끼 밸런스] 샐러드 + 라이스 1주 식단</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>23%</span>
+                                                <span>48,100원</span>
+                                                <span>61,400원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>52</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 세 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#" class="item-img">
+                                                    <img src="images/3.jpg" alt="데일리 샐러드 10종 맛보기" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-title">
+                                                <a href="#">데일리 샐러드 10종 맛보기</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>23%</span>
+                                                <span>69,300원</span>
+                                                <span>89,500원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>707</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 네 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#" class="item-img">
+                                                    <img src="images/4.jpg" alt="시즌3 곤약 라이스 6종 세트" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-title">
+                                                <a href="#">시즌3 곤약 라이스 6종 세트</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>23%</span>
+                                                <span>28,700원</span>
+                                                <span>37,700원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>98</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 베스트 -->
+            <section class="best">
+                <div class="inner">
+                    <h1 class="best-title section-title">인기 급상승 BEST</h1>
+                    <i class="more-arrow"><a href="#">더보기</a></i>
+
+                    <!-- swiper 적용-->
+                    <div class="best-slide">
+                        <!-- <button class="sw-bt sw-best-prev"></button>
+          <button class="sw-bt sw-best-next"></button> -->
+                        <!-- best swiper -->
+                        <div class="swiper sw-best">
+                            <div class="swiper-wrapper">
+                                <!-- 첫 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#" class="item-img">
+                                                    <img src="images/best-img-1.jpg" alt="닭가슴살 샐러드" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+                                            <div class="item-title">
+                                                <a href="#">닭가슴살 샐러드</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>19%</span>
+                                                <span>6,700원</span>
+                                                <span>8,300원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>476</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 두 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#">
+                                                    <img src="images/best-img-2.jpg" alt="크래미 샐러드" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-title">
+                                                <a href="#">크래미 샐러드</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>23%</span>
+                                                <span>6,900원</span>
+                                                <span>9,000원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>870</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 세 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#">
+                                                    <img src="images/best-img-3.jpg" alt="훈제오리 샐러드" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+                                            <div class="item-title">
+                                                <a href="#">훈제오리 샐러드</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>21%</span>
+                                                <span>6,700원</span>
+                                                <span>9,000원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>647</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 네 번째 슬라이드 -->
+                                <div class="swiper-slide">
+                                    <ul class="item">
+                                        <li>
+                                            <div class="item-img-box">
+                                                <a href="#">
+                                                    <img
+                                                        src="images/best-img-4.jpg"
+                                                        alt="닭가슴살볼 숯불갈비맛 샐러드" />
+                                                </a>
+                                                <div class="item-link">
+                                                    <button type="button" class="cart"></button>
+                                                </div>
+                                            </div>
+                                            <div class="item-title">
+                                                <a href="#">닭가슴살볼 숯불갈비맛 샐러드</a>
+                                            </div>
+                                            <div class="item-price">
+                                                <span>23%</span>
+                                                <span>6,900원</span>
+                                                <span>9,000원</span>
+                                            </div>
+                                            <div class="item-review">
+                                                <span
+                                                    ><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘"
+                                                /></span>
+                                                <span>370</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 배너 -->
+            <section class="banner">
+                <div class="banner-wrap inner">
+                    <a href="#">
+                        <img src="images/미압축/banner.jpg" alt="배너" class="banner1" /><img
+                            src="images/미압축/banner2.jpg"
+                            alt="배너2"
+                            class="banner2"
+                    /></a>
+                </div>
+            </section>
+
+            <!-- 골라담기 -->
+            <seciton class="pick">
+                <div class="pick-box inner">
+                    <h1 class="section-title">
+                        종류별 한팩 골라담기!
+                        <!-- 직접 먹어본 생생 후기! -->
+
+                        <i class="more-arrow"><a href="#">더보기</a></i>
+                    </h1>
+                    <div class="item-box2">
+                        <ul class="item2">
+                            <li>
+                                <div class="item-img-box2">
+                                    <a href="#"><img src="images/content_pack_1.jpg" alt="샐러드 23종 골라담기" /></a>
+                                    <div class="item-link">
+                                        <button type="button" class="cart"></button>
+                                    </div>
+                                </div>
+
+                                <div class="item-title">
+                                    <a href="#">샐러드 23종 골라담기</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>23%</span>
+                                    <span>6,900원</span>
+                                    <span>9,000원</span>
+                                </div>
+                                <div class="item-review">
+                                    <span><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘" /></span>
+                                    <span>370</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-img-box2">
+                                    <a href="#"><img src="images/content_pack_2.jpg" alt="간편식 23종 골라담기" /></a>
+                                    <div class="item-link">
+                                        <button type="button" class="cart"></button>
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <a href="#">간편식 23종 골라담기</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>36%</span>
+                                    <span>3,500원</span>
+                                    <span>5,500원</span>
+                                </div>
+                                <div class="item-review">
+                                    <span><img src="images/미압축/review_60x63_02 1.png" alt="리뷰 아이콘" /></span>
+                                    <span>726</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </seciton>
+            <!-- 리뷰 -->
+            <section class="review">
+                <div class="review-box inner">
+                    <h1 class="section-title">
+                        그린이들의 생생리뷰
+                        <i class="more-arrow"><a href="#">더보기</a></i>
+                    </h1>
+                    <!-- 직접 먹어본 생생 후기! -->
+                    <div class="seciton-center inner">
+                        <!-- swiper -->
+                        <div class="review-inner">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-1.jpeg" alt="리뷰1" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                깜빡하구 내용물 사진은 못찍었지만, 너무 맛있 게 잘 먹었어요. 특히 소스가
+                                                미쳣던데요. 그거 만 따로 사고 싶어요
+                                            </p>
+                                            <div class="info">
+                                                <p class="name">유**</p>
+                                                <p class="date">2023-11-13</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-2.jpeg" alt="리뷰2" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                너무 꼼꼼한 포장 그리고 양과 질에 너무 놀랬습니다! 게다가 맛은 또 왜이리
+                                                좋은지요! 계란 만 따로 더 사서 그냥 먹었는데 진짜 몸도 클린 해지는
+                                                기분이고 앞으로 슬림쿡 꾸준하게 주문 해서 시켜먹으려고합미다!
+                                            </p>
+                                            <div class="info">
+                                                <p class="name">김**</p>
+                                                <p class="date">2023-10-20</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-3.jpeg" alt="리뷰3" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                엄마 아빠도 신기하다며 같이 시켰음 너무 만족 하면서 이렇게 해주면 관리
+                                                잘 할 수 있을거 같다고 함 등산 갔다가 오면 딱이라고
+                                            </p>
+                                            <div class="info">
+                                                <p class="name">정**</p>
+                                                <p class="date">2023-10-20</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-4.jpeg" alt="리뷰4" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                3년전에 다이어트위해 pt를하고 그만두니 혼자운동해도 다시
+                                                찌더라구요..비싼 pt에 식단까지.어마어마햇죠. 결국 다이어트는 식단조절
+                                                저는 자몽과 커피를 좋아해서 이거가 쉬웠어요. 샐러드는 진짜 맛있구요
+                                                그래서 가끔 1년에 한두번 시켜요 스스로 식단짜서하면 아무때나 간식이
+                                                입에들어가서 결국 안되는데..덴마크는 큰돈을들여그런지 이거왜엔
+                                                안먹으니..일주일에 3킬로는 감량햇어요 그 담엔 정상으로돌아가니 1~2킬로
+                                                늘지만 1~2킬로 빼기가 쉽진않자나요. 자주하니 느낌알아서 이번엔 끝나고
+                                                폭식안할래요 ㅎㅎ 성공해서..나중에 또 할께요~~
+                                            </p>
+                                            <div class="info">
+                                                <p class="name">송**</p>
+                                                <p class="date">2023-10-13</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-5.jpeg" alt="리뷰5" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                너무 맛있는 함박스테이크와 샐러드를 먹는 느낌. 이거 안에 있는
+                                                함박스테이크만 따로 구매하고 싶어요, 완전 밥 도둑일듯
+                                            </p>
+                                            <div class="info">
+                                                <p class="name">유**</p>
+                                                <p class="date">2023-10-11</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-6.jpeg" alt="리뷰6" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                아주 맛있게 잘먹었습니다. 신선하고 좋아요.주는대로 먹으니 속이 편한게
+                                                젤인거 같아요
+                                            </p>
+                                            <div class="info">
+                                                <p class="name">김**</p>
+                                                <p class="date">2023-06-29</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="review-img-box">
+                                            <img src="images/review-img-7.jpeg" alt="리뷰7" />
+                                        </div>
+                                        <div class="section-bottom">
+                                            <div class="star">★★★★★</div>
+                                            <p class="review-info">
+                                                출산 후 매 끼니를 해결하기엔 시간도 부족하고 좀 힘들었는데 우연히
+                                                알게되어 한번 주문해서 먹어봤어요~ 다이어트 보다는 그냥 끼니 해결용으로
+                                                많은 기대는 하지 않았는데 2키로 감소 되어 있더라구요 ㅎㅎ 정말
+                                                육아하느라 정신없을때는 두끼 분량을 신랑이랑 같이 먹기도 했네요 아무래도
+                                                계속 배송을 해주니까 먹을 수 밖에 없는 ㅋㅋㅋㅋ 맛은 간이 슴슴하니 먹기
+                                                좋아요 자극적이지 않아서 좋고 신랑도 맛있다고 했구요 메뉴도 다양하고
+                                                질리지고 않고 너무너무 굿!! 근데 세끼 다 챙겨 먹기 힘들어서 ㅋㅋ 한끼
+                                                샐러드만 재 주문 했네요 ㅎㅎ 신선하게 부탁드려요~~
+                                            </p>
+
+                                            <div class="info">
+                                                <p class="name">김**</p>
+                                                <p class="date">2023-08-27</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="swiperBtn sw-review-prev"></a>
+                        <a href="#" class="swiperBtn sw-review-next"></a>
+                    </div>
+                    <!-- review-inner -->
+                </div>
+                <!-- .section center -->
+
+                <!-- .review-box inner -->
+            </section>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+                <div class="ft-up">
+                    <div class="ft-top-wrap inner">
+                        <div class="cs">
+                            <h3 class="ft-up-tit">고객센터</h3>
+                            <div class="cs-left">
+                                <strong>
+                                    <a href="#">053-572-1005</a>
+                                </strong>
+                                <div class="cs-day">
+                                    <p>평일 10:00 ~ 17:00</p>
+                                    <p>점심시간 12:30 ~ 13:30</p>
+                                    <p>주말, 공휴일 휴무</p>
+                                </div>
+                                <p>고객센터 운영시간 외에는 1:1 문의 게시판을 이용바랍니다.</p>
+                            </div>
+                            <div class="cs-right">
+                                <a href="#" class="ft-btn-hover">
+                                    1:1 문의하기
+                                    <i class="fa fa-chevron-right"></i>
+                                </a>
+                                <a href="#" class="ft-btn-hover">
+                                    FAQ 바로가기
+                                    <i class="fa fa-chevron-right"></i>
+                                </a>
+                                <a href="#" class="ft-btn-hover">
+                                    임금자 확인하기
+                                    <i class="fa fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bank">
+                            <h3 class="ft-up-tit">입금계좌</h3>
+                            <p>예금주 : (주)에이타워</p>
+                            <div class="bank-list">
+                                <b> 신한은행&nbsp;&nbsp; </b>
+                                <span>100031681034</span>
+                            </div>
+                            <div class="bank-list">
+                                <b> 농협은행&nbsp;&nbsp; </b>
+                                <span>3010197022371</span>
+                            </div>
+                            <div class="bank-list">
+                                <b> 국민은행&nbsp;&nbsp; </b>
+                                <span>43183701013928</span>
+                            </div>
+                            <div class="bank-list">
+                                <b> 우리은행&nbsp;&nbsp; </b>
+                                <span>1005003043705</span>
+                            </div>
+                            <div class="bank-btn">
+                                <a href="#" class="ft-btn-hover">
+                                    입금자 확인하기
+                                    <i class="fa fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="notice">
+                            <h3 class="ft-up-tit">공지사항</h3>
+                            <a class="footer-notice-more" href="#">더보기</a>
+                            <ul class="notice-list">
+                                <li>
+                                    <a href="#">
+                                        <b>[2024년 설날 및 임시휴일 배송 일정 안내]</b>
+                                        <time class="date" datetime="2024.01.30">2024.01.30</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <b>[2024 멤버십 변경 사전 안내]</b>
+                                        <time class="date" datetime="2023.12.26">2023.12.26</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <b>[2023년 성탄절 및 신정 배송 일정 안내]</b>
+                                        <time class="date" datetime="2023.12.21">2023.12.21</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <b>[동계 배송 안내]</b>
+                                        <time class="date" datetime="2023.11.24">2023.11.24</time>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--.ft-notice-->
+                    </div>
+                    <!-- .ft-top-box inner -->
+                </div>
+
+                <!-- footer down -->
+                <div class="ft-down1">
+                    <div class="ft-down1-wrap inner">
+                        <div class="ft-link">
+                            <ul class="link-left">
+                                <li>
+                                    <a href="#">회사소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <strong>개인정보처리방침</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">이용안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">고객센터</a>
+                                </li>
+                            </ul>
+                            <ul class="link-right">
+                                <li>
+                                    <a href="#">페이스북</a>
+                                </li>
+                                <li>
+                                    <a href="#">블로그</a>
+                                </li>
+                                <li>
+                                    <a href="#">유튜브</a>
+                                </li>
+                                <li>
+                                    <a href="#">인스타그램</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-down2">
+                    <div class="ft-down2-wrap inner">
+                        <div class="ft-down2-box">
+                            <!-- 회사 정보 -->
+                            <div class="company">
+                                <ul class="company-info">
+                                    <li>법인명(상호) : 그린박스</li>
+                                    <li>대표자(성명) : 김상곤</li>
+                                    <li>사업자 등록번호 : 504-85-25999</li>
+                                </ul>
+                                <ul>
+                                    <li>통신판매업신고 : 2013-대구중구-3307호</li>
+                                    <a href="#" class="click">[사업자정보확인]</a>
+                                    <li>전화 : 053-572-1005</li>
+                                    <li>주소 : 대구광역시 중구 중앙대로 394 제일빌딩 5F</li>
+                                    <li>
+                                        개인정보관리책임자 : 김상곤
+                                        <a href="#" class="click">(catering.greenbox@gmail.com)</a>
+                                    </li>
+                                </ul>
+                                <p class="copyright">Copyright © 그린박스. All rights reserved.</p>
+                            </div>
+                        </div>
+
+                        <!-- 하단 로고 -->
+                        <span class="ft-logo"
+                            ><span><img src="images/미압축/footer_logo.png" alt="로고" /></span>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
